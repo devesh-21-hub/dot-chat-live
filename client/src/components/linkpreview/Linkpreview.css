@@ -1,0 +1,22 @@
+.box {
+  width: 700px;
+  height: 150px;
+}
+img#myimage {
+  height: 90px;
+}
+.is-clipped {
+  overflow: hidden !important;
+  display: inline-block;
+  position: absolute;
+}
+div#mydescription {
+  width: 500px;
+  margin-left: 15px;
+}
+div#mytitle {
+  margin-left: 15px;
+}
+div#myurl {
+  margin-left: 15px;
+}

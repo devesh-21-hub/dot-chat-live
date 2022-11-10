@@ -1,0 +1,33 @@
+.location {
+  margin-top: 5%;
+  width: 15%;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  float: left;
+  justify-content: flex-start;
+  background-color: #ececec;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.button {
+  width: 80%;
+  margin: auto;
+  height: 10%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 200;
+  color: #21fa2c;
+  background-color: #2f2f2fd5;
+
+  border: 1px solid #7b7b7b;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1.5px 4px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}

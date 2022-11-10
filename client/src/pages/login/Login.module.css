@@ -1,0 +1,143 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  height: 100%;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 40px 0 20px 0;
+}
+
+.cerator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px;
+  top: 35px;
+  right: 210px;
+}
+
+.cerator a {
+  text-decoration: none;
+  color: #808080;
+  display: inline;
+}
+
+.formcontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  width: 100%;
+  margin-top: 60px;
+
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.144) 0px 5px 15px;
+}
+
+.input:nth-child(5) {
+  position: relative;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 40%;
+  gap: 40%;
+  font-size: 12px;
+}
+
+.loginOption input {
+  position: absolute;
+  left: 50px;
+  top: -5px;
+  cursor: pointer;
+}
+
+.loginOption a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.loginOption a:hover {
+  color: #59ff2b;
+}
+
+.formcontainer input {
+  width: 35%;
+  padding: 15px;
+  border: none;
+  margin: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.formcontainer input:focus {
+  outline: none;
+}
+
+.label {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.login button {
+  background-color: #81fc5f;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 14px 0;
+  margin: 10px 0;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 25%;
+}
+
+.login button:hover {
+  background-color: #59ff2b;
+}
+
+.signupLink {
+  margin: 10px 0;
+}
+
+.link {
+  color: yellowgreen;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #59ff2b;
+}
+
+.loginErrorMessage {
+  background-color: rgba(214, 79, 79, 0.5);
+  color: red;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cerator {
+    display: flex;
+    position: absolute;
+    right: -40px;
+  }
+
+  .loginOption input {
+    position: absolute;
+    left: -50px;
+    top: -5px;
+    cursor: pointer;
+  }
+}

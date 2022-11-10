@@ -1,0 +1,168 @@
+.navbar {
+  height: 55px;
+  border-bottom: 0.5px solid #d3d3d3;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  color: #262525;
+}
+
+.cerator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5px;
+  top: -4px;
+  right: -80px;
+}
+
+.cerator a {
+  text-decoration: none;
+  color: #808080;
+  display: inline;
+}
+
+.navlink {
+  color: #262525;
+}
+
+.navlink:hover {
+  color: #95fd79;
+  cursor: pointer;
+}
+
+.title {
+  position: relative;
+}
+
+.title h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+}
+
+.counter {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: greenyellow;
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: 0 25px;
+
+  position: relative;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1.5px solid #262525;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .cerator {
+    display: flex;
+    position: absolute;
+    right: -75px;
+    font-size: 12px;
+  }
+}
+
+/*Dropdown*/
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #ffffff;
+  border: none;
+}
+
+.dropdownContent {
+  padding: 15px 10px;
+  display: none;
+  position: absolute;
+  width: 80%;
+  left: -120px;
+  background-color: #ffffff;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropItem {
+  font-size: 12px;
+  margin: 5px;
+  padding: 5px;
+  border: 0.5px solid #262525;
+  color: #101010;
+  background-color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdownContent a {
+  text-decoration: none;
+}
+
+.dropdnIcon {
+  margin-left: 5px;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.dropItem:hover {
+  color: #95fd79;
+  border: 0.5px solid #98fd7cdb;
+}
+
+.dropdown:hover .dropdownContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-direction: column;
+}

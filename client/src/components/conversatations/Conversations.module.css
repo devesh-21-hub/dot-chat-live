@@ -1,0 +1,54 @@
+.conversation {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  cursor: pointer;
+  margin-top: 20px;
+
+  position: relative;
+
+  border-bottom: 0.5px solid #2f2f2f86;
+}
+
+.conversation:hover {
+  background-color: rgb(245, 243, 243);
+}
+
+.conversation::first-line {
+  background-color: #1c1515c7;
+}
+
+.conversationImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.onlineBadge {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2de42d;
+  top: 7px;
+  left: 40px;
+}
+
+.conversationName {
+  font-weight: bold;
+}
+
+.lastMessage {
+  position: absolute;
+  font-size: 12px;
+  bottom: 5px;
+  left: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .conversationName {
+    display: none;
+  }
+}
