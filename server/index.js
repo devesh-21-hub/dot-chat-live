@@ -46,7 +46,7 @@ app.use(conversations);
 const messages = require("./src/routes/messages");
 app.use(messages);
 
-server.listen(9000 || process.env.PORT, () => {
+server.listen(process.env.PORT || 9000, () => {
   console.log("Server listening on port 9000");
 });
 
