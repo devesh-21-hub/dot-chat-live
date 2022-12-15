@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Conversation = require("../models/Conversation");
-const User = require("../models/User");
+const Conversation = require("../../models/Conversation");
+const User = require("../../models/User");
 const auth = require("../auth/auth");
 
 const multer = require("multer");
