@@ -1,4 +1,4 @@
-//require("./config");
+require("./config");
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -6,17 +6,30 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const app = express();
 app.use(cors());
+const path = require("path");
 const { createServer } = require("http");
 const http = require("http");
-mongoose.connect("mongodb://localhost:27017/dotChatDB");
-//process.env.MONGODB_URL ||
+mongoose.connect(process.env.MONGODB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+// ||
+
+app.use(express.static(path.join(__dirname, "../client/build")));
+app.get("/", function (req, res) {
+  try {
+    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+  } catch (error) {
+    console.log(error.message);
+  }
+});
 
 const socket = require("socket.io");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
+app.get("/status", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
