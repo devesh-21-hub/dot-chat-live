@@ -64,3 +64,93 @@ server.listen(process.env.PORT || 9000, () => {
 });
 
 //module.exports = { io };
+
+/*
+
+
+require("dotenv").config();
+const express = require("express");
+const mongoose = require("mongoose");
+const cookieParser = require("cookie-parser");
+
+const cors = require("cors");
+const app = express();
+
+app.use(cors({ origin: true, credentials: true }));
+app.use(cookieParser("MY SECRET"));
+app.use(express.json());
+
+//DATABASE
+mongoose
+  .connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Database connected");
+  });
+
+app.get("/", (req, res) => {
+  res.send("Server up!");
+});
+
+
+require("./models/admin");
+require("./models/userModel");
+const port = 9000;
+
+let io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+  },
+});
+io.on("connection", (socket) => {
+  console.log("connected at ", socket.id);
+});
+
+const server = app.listen(port, () => {
+  console.log(`server started at port ${port}`);
+});
+
+
+// console.log("ok")
+// app.set("io", io)
+
+require("./controllers/users");
+require("./controllers/messages)(io);
+
+
+
+
+*/
+
+/*
+controllers/messages
+
+const WebSocket = require("ws");
+require("socket.io");
+
+module.exports = function (io) {
+  io.sockets.on("connection", (socket) => {
+    // console.log("disconnect??");
+    socket.on("disconnect", (data) => {
+      socket.disconnect();
+      console.log("disconnect");
+    });
+    socket.on("setSocketId", (data) => {
+      console.log(socket.id, data);
+      if (data)
+        userSchema
+          .findOneAndUpdate(
+            { _id: data },
+            { $set: { socketId: socket.id } },
+            { new: true }
+          )
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((error) => console.log(error));
+    });
+  });
+
+*/
